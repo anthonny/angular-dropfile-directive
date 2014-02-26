@@ -1,0 +1,3 @@
+[submodule "dropfile"]
+	path = dropfile
+	url = https://github.com/MrSwitch/dropfile.git
