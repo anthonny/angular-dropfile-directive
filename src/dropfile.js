@@ -43,6 +43,8 @@
 				element.bind('drop', function(event) {
 					var files;
     				dropCallback({event: event});
+    				// Jquery use originial Event
+    				event = event.originalEvent || event || window.event;
 					
 					files = (event.files || event.dataTransfer.files);
 					for (var i = 0; i < files.length; i++) {

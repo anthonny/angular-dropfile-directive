@@ -1,5 +1,5 @@
 /*!
- angular-dropfile-directive - v0.0.1 - 2014-02-27 
+ angular-dropfile-directive - v0.0.1 - 2014-03-02 
 
 ======================================= 
 */
@@ -45,6 +45,8 @@ function btoa(a){for(var b,c,d="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv
 				element.bind('drop', function(event) {
 					var files;
     				dropCallback({event: event});
+    				// Jquery use originial Event
+    				event = event.originalEvent || event || window.event;
 					
 					files = (event.files || event.dataTransfer.files);
 					for (var i = 0; i < files.length; i++) {
